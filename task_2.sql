@@ -2,7 +2,7 @@ USE alx_book_store;
 
 CREATE TABLE IF NOT EXISTS Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    author_name VARCHAR(255) NOT NULL
     -- Add other attributes from task 0 here
 );
 
@@ -35,5 +35,4 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     quantity INT,
     -- Add other attributes from task 0 here
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES Books(book_id)
-);
+    FOREIGN KEY
