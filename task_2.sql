@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     author_id INT,
+    price DECIMAL(10,2) NOT NULL,
     -- Add other attributes from task 0 here
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
@@ -35,4 +36,5 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     quantity INT,
     -- Add other attributes from task 0 here
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
+);
